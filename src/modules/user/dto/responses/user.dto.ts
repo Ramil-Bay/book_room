@@ -4,6 +4,6 @@ export class UserDto {
   email: string;
   phone: string;
   room: string;
-  active: boolean;
+
 
 }

@@ -34,7 +34,7 @@ export class UserMapper {
     dto.email = entity.email;
     dto.phone = entity.phone;
     dto.room = entity.room;
-    dto.active = entity.active;
+    
 
     return dto;
 
