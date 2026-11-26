@@ -5,7 +5,7 @@ export const DBModule = TypeOrmModule.forRoot({
   host: 'localhost',
   port: 5432,
   username: 'postgres',
-  password: '1234',
+  password: 'qwerty007',
   database: 'book_room',
   autoLoadEntities: true,
   synchronize: true,
