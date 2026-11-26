@@ -1,0 +1,9 @@
+export class UserSaveDto {
+  name: string;
+  email: string;
+  password: string;
+  phone: string;
+  room: string;
+}
+
+
