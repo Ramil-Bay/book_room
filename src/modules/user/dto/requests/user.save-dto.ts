@@ -3,7 +3,7 @@ export class UserSaveDto {
   email: string;
   password: string;
   phone: string;
-  room: string;
+  roomId: number;
 }
 
 

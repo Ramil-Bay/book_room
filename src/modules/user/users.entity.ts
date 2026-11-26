@@ -1,8 +1,13 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-
+import {
+  Column,
+  Entity,
+  PrimaryGeneratedColumn,
+  OneToOne,
+  JoinColumn,
+} from 'typeorm';
+import { Room } from '../room/room.entity.js';
 @Entity({ name: 'users' })
 export class User {
-
   @PrimaryGeneratedColumn({ name: 'id' })
   id: number;
 
@@ -19,9 +24,10 @@ export class User {
   phone: string;
 
   @Column({ name: 'room', nullable: true, unique: true })
-  room: string;
+  @OneToOne(() => Room)
+  @JoinColumn({ name: 'room_id' })
+  room: Room;
 
   @Column({ name: 'active', nullable: false, unique: false, default: true })
   active: boolean;
-
 }
