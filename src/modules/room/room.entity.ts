@@ -1,5 +1,6 @@
-import { Column, Entity, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn, OneToOne } from 'typeorm';
 import { ROOM_TYPE } from './enums/type.enum.js';
+import { User } from '../user/users.entity.js';
 
 @Entity()
 export class Room {
@@ -13,4 +14,6 @@ export class Room {
   pricePerNight: number;
   @Column({ name: 'isBooked' })
   isBooked: boolean;
+  @OneToOne(() => User, (user: User) => user.room)
+user: User;
 }
