@@ -2,10 +2,10 @@ import { Injectable } from '@nestjs/common';
 
 import { UserSaveDto } from './requests/user.save-dto.js';
 import { UserDto } from './responses/user.dto.js';
-import { User } from '../users.entity.js';
+import { User } from '../user.entity.js';
 
 @Injectable()
-export class UserMapper {
+export class UsersMapper {
 
   mapDtoToEntity(userSaveDto: UserSaveDto): User {
 
@@ -15,7 +15,7 @@ export class UserMapper {
     entity.email = userSaveDto.email;
     entity.password = userSaveDto.password;
     entity.phone = userSaveDto.phone;
-    entity.room = userSaveDto.room;
+   
 
     return entity;
 
