@@ -23,7 +23,6 @@ export class User {
   @Column({ name: 'phone', nullable: false, unique: true })
   phone: string;
 
-  @Column({ name: 'room', nullable: true, unique: true })
   @OneToOne(() => Room)
   @JoinColumn({ name: 'room_id' })
   room: Room;
